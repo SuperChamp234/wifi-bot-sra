@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "esp-idf/soc/soc/esp32",
+		"source" : "/Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32"
+	}
+}

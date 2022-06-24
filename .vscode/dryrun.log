@@ -1,0 +1,24 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver'
+ 
+The following Python requirements are not satisfied:
+click>=5.0
+pyserial>=3.0
+future>=0.15.2
+cryptography>=2.1.4,<35
+pyparsing>=2.0.3,<2.4.0
+pyelftools>=0.22
+gdbgui==0.13.2.0
+pygdbmi<=0.9.0.2
+python-socketio<5
+reedsolo>=1.5.3,<=1.5.4
+bitstring>=3.1.6
+ecdsa>=0.16.0
+Please follow the instructions found in the "Set up the tools" section of ESP-IDF Getting Started Guide
+Diagnostic information:
+    IDF_PYTHON_ENV_PATH: (not set)
+    Python interpreter used: /Users/zainsiddavatam/miniforge3/bin/python
+    Warning: python interpreter not running from IDF_PYTHON_ENV_PATH
+    PATH: /Users/zainsiddavatam/.rvm/gems/ruby-3.0.1/bin:/Users/zainsiddavatam/.rvm/gems/ruby-3.0.1@global/bin:/Users/zainsiddavatam/.rvm/rubies/ruby-3.0.1/bin:/opt/homebrew/opt/llvm/bin:/Users/zainsiddavatam/miniforge3/bin:/Users/zainsiddavatam/miniforge3/condabin:/opt/homebrew/opt/openjdk/bin:/Users/zainsiddavatam/.nvm/versions/node/v16.13.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/zainsiddavatam/.rvm/bin
+make: Leaving directory `/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver'
+ 

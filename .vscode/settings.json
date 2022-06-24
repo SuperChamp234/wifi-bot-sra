@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "websocket_server.h": "c",
+        "comms_websocket_server.h": "c"
+    },
+    "idf.adapterTargetName": "esp32"
+}

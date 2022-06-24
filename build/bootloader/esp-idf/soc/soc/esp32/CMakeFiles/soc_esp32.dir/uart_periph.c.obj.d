@@ -1,0 +1,24 @@
+esp-idf/soc/soc/esp32/CMakeFiles/soc_esp32.dir/uart_periph.c.obj: \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/uart_periph.c \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/../include/soc/uart_periph.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/include/soc/uart_reg.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/include/soc/soc.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include/stdint.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/esp_common/include/esp_assert.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h \
+ /Users/zainsiddavatam/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/esp_common/include/esp_bit_defs.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/include/soc/uart_struct.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/include/soc/uart_caps.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/include/soc/periph_defs.h \
+ /Users/zainsiddavatam/esp/esp-idf/components/soc/soc/esp32/include/soc/gpio_sig_map.h

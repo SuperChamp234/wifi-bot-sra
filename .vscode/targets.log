@@ -1,0 +1,1402 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+The following Python requirements are not satisfied:
+click>=5.0
+pyserial>=3.0
+future>=0.15.2
+cryptography>=2.1.4,<35
+pyparsing>=2.0.3,<2.4.0
+pyelftools>=0.22
+gdbgui==0.13.2.0
+pygdbmi<=0.9.0.2
+python-socketio<5
+reedsolo>=1.5.3,<=1.5.4
+bitstring>=3.1.6
+ecdsa>=0.16.0
+Please follow the instructions found in the "Set up the tools" section of ESP-IDF Getting Started Guide
+Diagnostic information:
+    IDF_PYTHON_ENV_PATH: (not set)
+    Python interpreter used: /Users/zainsiddavatam/miniforge3/bin/python
+    Warning: python interpreter not running from IDF_PYTHON_ENV_PATH
+    PATH: /Users/zainsiddavatam/.rvm/gems/ruby-3.0.1/bin:/Users/zainsiddavatam/.rvm/gems/ruby-3.0.1@global/bin:/Users/zainsiddavatam/.rvm/rubies/ruby-3.0.1/bin:/opt/homebrew/opt/llvm/bin:/Users/zainsiddavatam/miniforge3/bin:/Users/zainsiddavatam/miniforge3/condabin:/opt/homebrew/opt/openjdk/bin:/Users/zainsiddavatam/.nvm/versions/node/v16.13.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/zainsiddavatam/.rvm/bin
+ 
+
+# Make data base, printed on Thu Jun 23 13:23:40 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+RUBY_VERSION = ruby-3.0.1
+# automatic
+?F = $(notdir $?)
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 176)
+ 
+COMPONENTS := app_trace app_update asio bootloader bootloader_support bt cbor coap console cxx driver efuse esp-tls esp32 esp32s2 esp_adc_cal esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_ipc esp_local_ctrl esp_netif esp_ringbuf esp_rom esp_serial_slave_link esp_system esp_timer esp_websocket_client esp_wifi espcoredump esptool_py expat fatfs freemodbus freertos heap idf_test jsmn json libsodium log lwip main mbedtls mdns mqtt newlib nghttp nvs_flash openssl partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs sra-board-component tcp_transport tcpip_adapter ulp unity vfs wear_levelling websocket wifi_provisioning wpa_supplicant xtensa
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+NVM_INC = /Users/zainsiddavatam/.nvm/versions/node/v16.13.2/include/node
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+rvm_path = /Users/zainsiddavatam/.rvm
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver
+# makefile
+SHELL = /bin/sh
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 143)
+EXTRA_COMPONENT_DIRS = 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 25)
+V = $(VERBOSE)
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 53)
+NON_INTERACTIVE_TARGET = defconfig clean% %clean help list-components print_flash_cmd check_python_dependencies
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 220)
+TEST_COMPONENT_NAMES := 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 1)
+MAKEFILE_LIST :=  Makefile /Users/zainsiddavatam/esp/esp-idf/make/project.mk /Users/zainsiddavatam/esp/esp-idf/make/common.mk /Users/zainsiddavatam/esp/esp-idf/make/version.mk /Users/zainsiddavatam/esp/esp-idf/make/project_config.mk
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 11)
+SDKCONFIG_MAKEFILE = $(abspath $(BUILD_DIR_BASE)/include/config/auto.conf)
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 231)
+HOSTCC := gcc
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/version.mk', line 3)
+IDF_VERSION_PATCH := 3
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 232)
+HOSTLD := ld
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 102)
+MENUCONFIG_STYLE = aquatic
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 148)
+COMPONENT_DIRS := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components /Users/zainsiddavatam/esp/esp-idf/components /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 135)
+BUILD_DIR_BASE := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/build
+# environment
+__CFBundleIdentifier = com.microsoft.VSCode
+# environment
+INFOPATH = /opt/homebrew/share/info:
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 72)
+DEFAULTS_ARG := 
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/m6/w3ts2d2x7h54433k2575scfw0000gn/T/vscode-ipc-0aa64edc-bd7a-42e7-84cd-6a9af873708e.sock
+# environment
+VSCODE_CWD = /
+# environment
+PATH = /Users/zainsiddavatam/.rvm/gems/ruby-3.0.1/bin:/Users/zainsiddavatam/.rvm/gems/ruby-3.0.1@global/bin:/Users/zainsiddavatam/.rvm/rubies/ruby-3.0.1/bin:/opt/homebrew/opt/llvm/bin:/Users/zainsiddavatam/miniforge3/bin:/Users/zainsiddavatam/miniforge3/condabin:/opt/homebrew/opt/openjdk/bin:/Users/zainsiddavatam/.nvm/versions/node/v16.13.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Applications/Wireshark.app/Contents/MacOS:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/zainsiddavatam/.rvm/bin
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 224)
+LD = ld
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 117)
+define RunMenuConf
+	mkdir -p $(BUILD_DIR_BASE)/include/config
+	cd $(BUILD_DIR_BASE); KCONFIG_AUTOHEADER=$(abspath $(BUILD_DIR_BASE)/include/sdkconfig.h) KCONFIG_CONFIG=$(SDKCONFIG) COMPONENT_KCONFIGS_SOURCE_FILE="$(COMPONENT_KCONFIGS_SOURCE_FILE)" COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE="$(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)" IDF_CMAKE=n $(MENUCONFIG_CMD) $(IDF_PATH)/Kconfig
+endef
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 30)
+summary := @echo
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 50)
+dequote = $(subst ",,$(1))
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/version.mk', line 2)
+IDF_VERSION_MINOR := 2
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 91)
+uniq = $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
+# environment
+NVM_BIN = /Users/zainsiddavatam/.nvm/versions/node/v16.13.2/bin
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 99)
+stripLeadingParentDirs = $(foreach path,$(1),$(if $(subst ..,,$(path)),$(if $(filter ../%,$(path)),$(call stripLeadingParentDirs,$(patsubst ../%,%,$(path))),$(path)),.))
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 225)
+AR = ar
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 27)
+SDKCONFIG_RENAME = $(IDF_PATH)/sdkconfig.rename
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 83)
+define RunConfGen
+	mkdir -p $(BUILD_DIR_BASE)/include/config
+	$(PYTHON) $(IDF_PATH)/tools/kconfig_new/confgen.py --kconfig $(IDF_PATH)/Kconfig --config $(SDKCONFIG) --sdkconfig-rename $(SDKCONFIG_RENAME) --env "COMPONENT_KCONFIGS=$(strip $(COMPONENT_KCONFIGS))" --env "COMPONENT_KCONFIGS_PROJBUILD=$(strip $(COMPONENT_KCONFIGS_PROJBUILD))" --env "COMPONENT_KCONFIGS_SOURCE_FILE=$(COMPONENT_KCONFIGS_SOURCE_FILE)" --env "COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=$(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)" --env "COMPONENT_SDKCONFIG_RENAMES=$(strip $(COMPONENT_SDKCONFIG_RENAMES))" --env "IDF_CMAKE=n" $(DEFAULTS_ARG) --output config ${SDKCONFIG} --output makefile $(SDKCONFIG_MAKEFILE) --output header $(BUILD_DIR_BASE)/include/sdkconfig.h $1
+endef
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Vh9nskBEYI/Listeners
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 209)
+TESTS_ALL = 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 228)
+SIZE = size
+# automatic
+%F = $(notdir $%)
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 5)
+COMPONENT_KCONFIGS_PROJBUILD :=  /Users/zainsiddavatam/esp/esp-idf/components/app_update/Kconfig.projbuild  /Users/zainsiddavatam/esp/esp-idf/components/bootloader/Kconfig.projbuild                                 /Users/zainsiddavatam/esp/esp-idf/components/esptool_py/Kconfig.projbuild            /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main/Kconfig.projbuild        /Users/zainsiddavatam/esp/esp-idf/components/partition_table/Kconfig.projbuild                   
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 31)
+details := @true
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.LrU5EL8fPq/org.xquartz:0
+# environment
+CONDA_EXE = /Users/zainsiddavatam/miniforge3/bin/conda
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 208)
+TEST_EXCLUDE_COMPONENTS = 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 21)
+KCONFIG_TOOL_DIR = $(IDF_PATH)/tools/kconfig
+ 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 233)
+HOSTAR := ar
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+rvm_bin_path = /Users/zainsiddavatam/.rvm/bin
+# environment
+PWD = /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver
+# environment
+HOMEBREW_CELLAR = /opt/homebrew/Cellar
+# environment
+GEM_HOME = /Users/zainsiddavatam/.rvm/gems/ruby-3.0.1
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 61)
+PYTHON = python
+# environment
+MANPATH = /Users/zainsiddavatam/.nvm/versions/node/v16.13.2/share/man:/opt/homebrew/share/man::
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/zainsiddavatam
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/zainsiddavatam/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+LOGNAME = zainsiddavatam
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+NVM_CD_FLAGS = -q
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 107)
+MENUCONFIG_CMD := python /Users/zainsiddavatam/esp/esp-idf/tools/kconfig_new/menuconfig.py
+# environment
+ZSH = /Users/zainsiddavatam/.oh-my-zsh
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 7)
+COMPONENT_KCONFIGS_SOURCE_FILE := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/build/kconfigs.in
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 216)
+TEST_COMPONENTS_LIST := 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 124)
+PROJECT_PATH := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver
+# environment
+GEM_PATH = /Users/zainsiddavatam/.rvm/gems/ruby-3.0.1:/Users/zainsiddavatam/.rvm/gems/ruby-3.0.1@global
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 24)
+VERBOSE = 
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+XPC_FLAGS = 0x0
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 161)
+MULTI_COMPONENT_DIRS := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components /Users/zainsiddavatam/esp/esp-idf/components
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+IRBRC = /Users/zainsiddavatam/.rvm/rubies/ruby-3.0.1/.irbrc
+# environment
+SHLVL = 1
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 223)
+CC = gcc
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 157)
+SINGLE_COMPONENT_DIRS := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = zainsiddavatam
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 83)
+prereq_if_explicit = $(filter $(1),$(MAKECMDGOALS))
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/version.mk', line 1)
+IDF_VERSION_MAJOR := 4
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 47)
+SEPARATOR := "*******************************************************************************"
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 198)
+COMPONENT_PATHS :=  /Users/zainsiddavatam/esp/esp-idf/components/app_trace  /Users/zainsiddavatam/esp/esp-idf/components/app_update  /Users/zainsiddavatam/esp/esp-idf/components/asio  /Users/zainsiddavatam/esp/esp-idf/components/bootloader  /Users/zainsiddavatam/esp/esp-idf/components/bootloader_support  /Users/zainsiddavatam/esp/esp-idf/components/bt  /Users/zainsiddavatam/esp/esp-idf/components/cbor  /Users/zainsiddavatam/esp/esp-idf/components/coap  /Users/zainsiddavatam/esp/esp-idf/components/console  /Users/zainsiddavatam/esp/esp-idf/components/cxx  /Users/zainsiddavatam/esp/esp-idf/components/driver  /Users/zainsiddavatam/esp/esp-idf/components/efuse  /Users/zainsiddavatam/esp/esp-idf/components/esp-tls  /Users/zainsiddavatam/esp/esp-idf/components/esp32  /Users/zainsiddavatam/esp/esp-idf/components/esp32s2  /Users/zainsiddavatam/esp/esp-idf/components/esp_adc_cal  /Users/zainsiddavatam/esp/esp-idf/components/esp_common  /Users/zainsiddavatam/esp/esp-idf/components/esp_eth  /Users/zainsiddavatam/esp/esp-idf/components/esp_event  /Users/zainsiddavatam/esp/esp-idf/components/esp_gdbstub  /Users/zainsiddavatam/esp/esp-idf/components/esp_hid  /Users/zainsiddavatam/esp/esp-idf/components/esp_http_client  /Users/zainsiddavatam/esp/esp-idf/components/esp_http_server  /Users/zainsiddavatam/esp/esp-idf/components/esp_https_ota  /Users/zainsiddavatam/esp/esp-idf/components/esp_https_server  /Users/zainsiddavatam/esp/esp-idf/components/esp_ipc  /Users/zainsiddavatam/esp/esp-idf/components/esp_local_ctrl  /Users/zainsiddavatam/esp/esp-idf/components/esp_netif  /Users/zainsiddavatam/esp/esp-idf/components/esp_ringbuf  /Users/zainsiddavatam/esp/esp-idf/components/esp_rom  /Users/zainsiddavatam/esp/esp-idf/components/esp_serial_slave_link  /Users/zainsiddavatam/esp/esp-idf/components/esp_system  /Users/zainsiddavatam/esp/esp-idf/components/esp_timer  /Users/zainsiddavatam/esp/esp-idf/components/esp_websocket_client  /Users/zainsiddavatam/esp/esp-idf/components/esp_wifi  /Users/zainsiddavatam/esp/esp-idf/components/espcoredump  /Users/zainsiddavatam/esp/esp-idf/components/esptool_py  /Users/zainsiddavatam/esp/esp-idf/components/expat  /Users/zainsiddavatam/esp/esp-idf/components/fatfs  /Users/zainsiddavatam/esp/esp-idf/components/freemodbus  /Users/zainsiddavatam/esp/esp-idf/components/freertos  /Users/zainsiddavatam/esp/esp-idf/components/heap  /Users/zainsiddavatam/esp/esp-idf/components/idf_test  /Users/zainsiddavatam/esp/esp-idf/components/jsmn  /Users/zainsiddavatam/esp/esp-idf/components/json  /Users/zainsiddavatam/esp/esp-idf/components/libsodium  /Users/zainsiddavatam/esp/esp-idf/components/log  /Users/zainsiddavatam/esp/esp-idf/components/lwip  /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main  /Users/zainsiddavatam/esp/esp-idf/components/mbedtls  /Users/zainsiddavatam/esp/esp-idf/components/mdns  /Users/zainsiddavatam/esp/esp-idf/components/mqtt  /Users/zainsiddavatam/esp/esp-idf/components/newlib  /Users/zainsiddavatam/esp/esp-idf/components/nghttp  /Users/zainsiddavatam/esp/esp-idf/components/nvs_flash  /Users/zainsiddavatam/esp/esp-idf/components/openssl  /Users/zainsiddavatam/esp/esp-idf/components/partition_table  /Users/zainsiddavatam/esp/esp-idf/components/perfmon  /Users/zainsiddavatam/esp/esp-idf/components/protobuf-c  /Users/zainsiddavatam/esp/esp-idf/components/protocomm  /Users/zainsiddavatam/esp/esp-idf/components/pthread  /Users/zainsiddavatam/esp/esp-idf/components/sdmmc  /Users/zainsiddavatam/esp/esp-idf/components/soc  /Users/zainsiddavatam/esp/esp-idf/components/spi_flash  /Users/zainsiddavatam/esp/esp-idf/components/spiffs  /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sra-board-component  /Users/zainsiddavatam/esp/esp-idf/components/tcp_transport  /Users/zainsiddavatam/esp/esp-idf/components/tcpip_adapter  /Users/zainsiddavatam/esp/esp-idf/components/ulp  /Users/zainsiddavatam/esp/esp-idf/components/unity  /Users/zainsiddavatam/esp/esp-idf/components/vfs  /Users/zainsiddavatam/esp/esp-idf/components/wear_levelling  /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/websocket  /Users/zainsiddavatam/esp/esp-idf/components/wifi_provisioning  /Users/zainsiddavatam/esp/esp-idf/components/wpa_supplicant  /Users/zainsiddavatam/esp/esp-idf/components/xtensa
+# environment
+rvm_version = 1.29.12-next (master)
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 1
+# default
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+ 
+TMPDIR = /var/folders/m6/w3ts2d2x7h54433k2575scfw0000gn/T/
+# automatic
+*F = $(notdir $*)
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 76)
+OS = 
+# environment
+VSCODE_IPC_HOOK = /Users/zainsiddavatam/Library/Application Support/Code/1.68.1-main.sock
+# makefile
+MAKEFLAGS = sRrqp
+# environment
+MFLAGS = -sRrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/common.mk', line 69)
+resolvepath = $(abspath $(foreach dir,$(1),$(if $(filter /%,$(dir)),$(dir),$(subst //,/,$(2)/$(dir)))))
+# environment
+NVM_DIR = /Users/zainsiddavatam/.nvm
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 89)
+IDF_PATH := /Users/zainsiddavatam/esp/esp-idf
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.29209337.29209343
+# environment
+HOMEBREW_PREFIX = /opt/homebrew
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 227)
+OBJDUMP = objdump
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 66)
+SDKCONFIG_DEFAULTS_FILES := $(subst ,, )
+# automatic
++F = $(notdir $+)
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 86)
+SANITISED_IDF_PATH := /Users/zainsiddavatam/esp/esp-idf
+# environment
+HOMEBREW_REPOSITORY = /opt/homebrew
+# environment
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from `Makefile', line 6)
+PROJECT_NAME := comms_connect
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 219)
+TEST_COMPONENT_PATHS := 
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /Users/zainsiddavatam/miniforge3/bin/python
+# automatic
+^F = $(notdir $^)
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 118)
+MAKEFLAGS_OLD := Rrqp
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 226)
+OBJCOPY = objcopy
+# environment
+rvm_prefix = /Users/zainsiddavatam
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 129)
+COMMON_MAKEFILES := /Users/zainsiddavatam/esp/esp-idf/make/project.mk /Users/zainsiddavatam/esp/esp-idf/make/common.mk /Users/zainsiddavatam/esp/esp-idf/make/version.mk /Users/zainsiddavatam/esp/esp-idf/make/component_wrapper.mk /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/Makefile
+ 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 100)
+IDF_TARGET := esp32
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 207)
+TEST_COMPONENTS = 
+# environment
+MAKELEVEL := 0
+# environment
+PICO_SDK_PATH = /Users/zainsiddavatam/pico-sdk
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 235)
+HOSTSIZE := size
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 25)
+SDKCONFIG = $(PROJECT_PATH)/sdkconfig
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 4)
+COMPONENT_KCONFIGS := /Users/zainsiddavatam/esp/esp-idf/components/app_trace/Kconfig     /Users/zainsiddavatam/esp/esp-idf/components/bt/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/coap/Kconfig   /Users/zainsiddavatam/esp/esp-idf/components/driver/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/efuse/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp-tls/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp32/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp32s2/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_adc_cal/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_common/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_eth/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_event/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_gdbstub/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/esp_http_client/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_http_server/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_https_ota/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_https_server/Kconfig   /Users/zainsiddavatam/esp/esp-idf/components/esp_netif/Kconfig    /Users/zainsiddavatam/esp/esp-idf/components/esp_system/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_timer/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/esp_wifi/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/espcoredump/Kconfig   /Users/zainsiddavatam/esp/esp-idf/components/fatfs/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/freemodbus/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/freertos/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/heap/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/jsmn/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/libsodium/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/log/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/lwip/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/mbedtls/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mdns/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mqtt/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/newlib/Kconfig  /Users/zainsiddavatam/esp/esp-idf/components/nvs_flash/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/openssl/Kconfig     /Users/zainsiddavatam/esp/esp-idf/components/pthread/Kconfig   /Users/zainsiddavatam/esp/esp-idf/components/spi_flash/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/spiffs/Kconfig /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sra-board-component/Kconfig    /Users/zainsiddavatam/esp/esp-idf/components/unity/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/vfs/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wear_levelling/Kconfig /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/websocket/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wifi_provisioning/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wpa_supplicant/Kconfig 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 234)
+HOSTOBJCOPY := objcopy
+# environment
+CONDA_PREFIX = /Users/zainsiddavatam/miniforge3
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 8)
+COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE := /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/build/kconfigs_projbuild.in
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 180)
+EXCLUDE_COMPONENTS = 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 31)
+SDKCONFIG_DEFAULTS = $(PROJECT_PATH)/sdkconfig.defaults
+# environment
+VSCODE_PID = 47557
+# environment
+MY_RUBY_HOME = /Users/zainsiddavatam/.rvm/rubies/ruby-3.0.1
+# environment
+_CE_CONDA = 
+# makefile (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 6)
+COMPONENT_SDKCONFIG_RENAMES := /Users/zainsiddavatam/esp/esp-idf/components/app_trace/sdkconfig.rename   /Users/zainsiddavatam/esp/esp-idf/components/bootloader/sdkconfig.rename  /Users/zainsiddavatam/esp/esp-idf/components/bt/sdkconfig.rename     /Users/zainsiddavatam/esp/esp-idf/components/driver/sdkconfig.rename   /Users/zainsiddavatam/esp/esp-idf/components/esp32/sdkconfig.rename   /Users/zainsiddavatam/esp/esp-idf/components/esp_common/sdkconfig.rename  /Users/zainsiddavatam/esp/esp-idf/components/esp_event/sdkconfig.rename             /Users/zainsiddavatam/esp/esp-idf/components/esp_system/sdkconfig.rename /Users/zainsiddavatam/esp/esp-idf/components/esp_timer/sdkconfig.rename  /Users/zainsiddavatam/esp/esp-idf/components/esp_wifi/sdkconfig.rename  /Users/zainsiddavatam/esp/esp-idf/components/esptool_py/sdkconfig.rename   /Users/zainsiddavatam/esp/esp-idf/components/freemodbus/sdkconfig.rename /Users/zainsiddavatam/esp/esp-idf/components/freertos/sdkconfig.rename       /Users/zainsiddavatam/esp/esp-idf/components/lwip/sdkconfig.rename             /Users/zainsiddavatam/esp/esp-idf/components/pthread/sdkconfig.rename   /Users/zainsiddavatam/esp/esp-idf/components/spi_flash/sdkconfig.rename       /Users/zainsiddavatam/esp/esp-idf/components/vfs/sdkconfig.rename     
+# environment
+LANG = C
+# variable set hash-table stats:
+# Load=157/1024=15%, Rehash=0, Collisions=125/883=14%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/lwip: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/tcpip_adapter: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/heap: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_event: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/mqtt: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_netif (device 16777232, inode 13293324): 14 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/websocket (device 16777232, inode 28594038): 11 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_wifi: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/log: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/nvs_flash (device 16777232, inode 13294252): 12 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/cbor (device 16777232, inode 13292655): 6 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_https_server: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/bootloader_support (device 16777232, inode 13291775): 10 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/espcoredump (device 16777232, inode 13293563): 11 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/mbedtls (device 16777232, inode 13294040): 10 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/fatfs (device 16777232, inode 13293617): 11 files, no impossibilities.
+# /Users/zainsiddavatam/esp (device 16777232, inode 13309753): 4 files, no impossibilities so far.
+# /Users/zainsiddavatam/esp/esp-idf/components/app_update (device 16777232, inode 13291722): 11 files, no impossibilities.
+ 
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/perfmon: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp32s2: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/nghttp (device 16777232, inode 13294235): 12 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/newlib (device 16777232, inode 13294186): 24 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/sra-board-component: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/main: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/xtensa: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/efuse (device 16777232, inode 13292844): 14 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/spiffs (device 16777232, inode 13295107): 15 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/bt (device 16777232, inode 13291837): 12 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esptool_py (device 16777232, inode 13293591): 15 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver (device 16777232, inode 28484880): 15 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp32s2 (device 16777232, inode 13293010): 29 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/protocomm: could not be stat'd.
+# . (device 16777232, inode 28484880): 15 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_system (device 16777232, inode 13293449): 11 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_ipc: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/wifi_provisioning: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/tcp_transport: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/idf_test: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/console: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/vfs: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_https_server (device 16777232, inode 13293285): 7 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/mbedtls: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_rom (device 16777232, inode 13293367): 8 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/unity: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/lwip (device 16777232, inode 13293927): 13 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/asio: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_https_ota (device 16777232, inode 13293277): 7 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/freertos: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/json (device 16777232, inode 13293890): 6 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_hid (device 16777232, inode 13293201): 8 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/nvs_flash: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/jsmn: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components (device 16777232, inode 13291677): 77 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_serial_slave_link (device 16777232, inode 13293439): 8 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/openssl: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/wpa_supplicant (device 16777232, inode 13295336): 10 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/expat: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/protobuf-c: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_ringbuf (device 16777232, inode 13293355): 8 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/mdns: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/app_trace: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/cxx: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_gdbstub: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/partition_table (device 16777232, inode 13294366): 17 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/spi_flash: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/driver (device 16777232, inode 13292707): 41 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/ulp: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp32: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_rom: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/tools/kconfig (device 16777232, inode 13299400): 36 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/wear_levelling: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_adc_cal (device 16777232, inode 13293071): 8 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/wear_levelling (device 16777232, inode 13295253): 21 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_websocket_client: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/espcoredump: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/heap (device 16777232, inode 13293830): 19 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/vfs (device 16777232, inode 13295230): 13 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/ulp (device 16777232, inode 13295184): 18 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/mqtt (device 16777232, inode 13294172): 8 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/app_trace (device 16777232, inode 13291678): 16 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_timer: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_wifi (device 16777232, inode 13293506): 16 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_eth: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/pthread: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/libsodium: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_http_client: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/sdmmc (device 16777232, inode 13294478): 13 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_event (device 16777232, inode 13293155): 16 files, no impossibilities.
+ 
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp-tls: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/perfmon (device 16777232, inode 13294385): 9 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/bootloader: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/mdns (device 16777232, inode 13294131): 12 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main (device 16777232, inode 28489445): 9 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/xtensa (device 16777232, inode 13295566): 16 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/coap: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_http_server: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/expat (device 16777232, inode 13293605): 8 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/jsmn (device 16777232, inode 13293882): 7 files, no impossibilities.
+ 
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/soc: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_netif: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/protocomm (device 16777232, inode 13294404): 10 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_common: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_ipc (device 16777232, inode 13293293): 7 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/tcp_transport (device 16777232, inode 13295134): 12 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/idf_test (device 16777232, inode 13293868): 7 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/console (device 16777232, inode 13292677): 11 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/bootloader_support: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/fatfs: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/json: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/app_update: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/websocket: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/asio (device 16777232, inode 13291738): 6 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sdmmc: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/freertos (device 16777232, inode 13293745): 19 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/newlib: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sra-board-component (device 16777232, inode 28594051): 19 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/main: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_websocket_client (device 16777232, inode 13293500): 6 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/efuse: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/freemodbus: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_common (device 16777232, inode 13293079): 11 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/bt: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/openssl (device 16777232, inode 13294331): 9 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/pthread (device 16777232, inode 13294459): 12 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esptool_py: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/protobuf-c (device 16777232, inode 13294400): 5 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/log (device 16777232, inode 13293913): 13 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/libsodium (device 16777232, inode 13293895): 9 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/unity (device 16777232, inode 13295217): 10 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_system: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/wifi_provisioning (device 16777232, inode 13295297): 10 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/cxx (device 16777232, inode 13292696): 7 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_gdbstub (device 16777232, inode 13293180): 12 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/spi_flash (device 16777232, inode 13294989): 31 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_local_ctrl: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_http_server (device 16777232, inode 13293252): 8 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/tcpip_adapter (device 16777232, inode 13295154): 6 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp32 (device 16777232, inode 13292912): 29 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_https_ota: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/soc (device 16777232, inode 13294495): 10 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/cbor: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_hid: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components (device 16777232, inode 28594035): 5 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_serial_slave_link: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/wpa_supplicant: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/nghttp: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_ringbuf: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_timer (device 16777232, inode 13293477): 11 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_eth (device 16777232, inode 13293125): 8 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/spiffs: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/partition_table: could not be stat'd.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/driver: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_http_client (device 16777232, inode 13293233): 9 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/freemodbus (device 16777232, inode 13293669): 11 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp_local_ctrl (device 16777232, inode 13293303): 9 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/esp-tls (device 16777232, inode 13292900): 10 files, no impossibilities.
+# /Users/zainsiddavatam/esp/esp-idf/components/bootloader (device 16777232, inode 13291746): 9 files, no impossibilities.
+# /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/esp_adc_cal: could not be stat'd.
+# /Users/zainsiddavatam/esp/esp-idf/components/coap (device 16777232, inode 13292662): 7 files, no impossibilities.
+
+# 1075 files, no impossibilities in 159 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/unity/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_common/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+config-clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 175):
+	$(summary) RM CONFIG
+	rm -rf $(BUILD_DIR_BASE)/include/config $(BUILD_DIR_BASE)/include/sdkconfig.h \
+	$(COMPONENT_KCONFIGS_SOURCE_FILE) $(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/spi_flash/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/zconf.y:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/freemodbus/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/libsodium/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/gconf.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: all_binaries | check_python_dependencies
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/spiffs/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_eth/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: build-components menuconfig defconfig all build clean all_binaries check-submodules size size-components size-files size-symbols list-components check_python_dependencies term_check config-clean defconfig menuconfig
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all_binaries:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/expand_env.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp32s2/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/heap/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/wear_levelling/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_gdbstub/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/app_trace/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/bootloader/Kconfig.projbuild:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+ 
+
+# Not a target:
+/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sra-board-component/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:39:39
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+list-components:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esptool_py/Kconfig.projbuild:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/openssl/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/mconf.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/nconf.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-14 12:03:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/mconf-idf: /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/conf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/confdata.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/expand_env.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/expr.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/gconf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/images.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/kxgettext.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/mconf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/menu.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/nconf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/nconf.gui.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/symbol.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/util.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/zconf.y /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/conf-idf
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 43):
+	@echo "mconf-idf is not required on this platform"
+	
+
+prepare_kconfig_files:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 75):
+	mkdir -p $(BUILD_DIR_BASE)
+	$(PYTHON) $(IDF_PATH)/tools/kconfig_new/prepare_kconfig_files.py \
+	--env "COMPONENT_KCONFIGS=$(strip $(COMPONENT_KCONFIGS))" \
+	--env "COMPONENT_KCONFIGS_PROJBUILD=$(strip $(COMPONENT_KCONFIGS_PROJBUILD))" \
+	--env "COMPONENT_KCONFIGS_SOURCE_FILE=$(COMPONENT_KCONFIGS_SOURCE_FILE)" \
+	--env "COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=$(COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE)"
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_http_client/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/confdata.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+check-submodules:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+defconfig: | check_python_dependencies prepare_kconfig_files
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 157):
+	$(summary) DEFCONFIG
+	$(call RunConfGen,)
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp32/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/nvs_flash/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main/Kconfig.projbuild:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-14 11:57:22
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+check_python_dependencies:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# automatic
+# @ := check_python_dependencies
+# automatic
+ 
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 245):
+	$(PYTHON) $(IDF_PATH)/tools/check_python_dependencies.py
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/mbedtls/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/wifi_provisioning/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/efuse/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/newlib/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_https_server/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/menu.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/images.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/wpa_supplicant/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+size-files:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_https_ota/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+size:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/mdns/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+help:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project.mk', line 25):
+	@echo "Welcome to Espressif IDF build system. Some useful make targets:"
+	@echo ""
+	@echo "make menuconfig - Configure IDF project"
+	@echo "make defconfig - Set defaults for all new configuration options"
+	@echo ""
+	@echo "make all - Build app, bootloader, partition table"
+	@echo "make flash - Flash app, bootloader, partition table to a chip"
+	@echo "make clean - Remove all build output"
+	@echo "make size - Display the static memory footprint of the app"
+	@echo "make size-components, size-files - Finer-grained memory footprints"
+	@echo "make size-symbols - Per symbol memory footprint. Requires COMPONENT=<component>"
+	@echo "make erase_flash - Erase entire flash contents"
+	@echo "make erase_otadata - Erase ota_data partition; First bootable partition (factory or OTAx) will be used on next boot."
+	@echo "                     This assumes this project's partition table is the one flashed on the device."
+	@echo "make monitor - Run idf_monitor tool to monitor serial output from app"
+	@echo "make simple_monitor - Monitor serial output on terminal console"
+	@echo "make list-components - List all components in the project"
+	@echo ""
+	@echo "make app - Build just the app"
+	@echo "make app-flash - Flash just the app"
+	@echo "make app-clean - Clean just the app"
+	@echo "make print_flash_cmd - Print the arguments for esptool when flash"
+	@echo "make check_python_dependencies - Check that the required python packages are installed"
+	@echo ""
+	@echo "See also 'make bootloader', 'make bootloader-flash', 'make bootloader-clean', "
+	@echo "'make partition_table', etc, etc."
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/make/project.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/app_update/Kconfig.projbuild:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_http_server/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/build/include/sdkconfig.h: /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/sdkconfig /Users/zainsiddavatam/esp/esp-idf/components/app_trace/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/bt/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/coap/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/driver/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/efuse/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp-tls/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp32/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp32s2/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_adc_cal/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_common/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_eth/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_event/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_gdbstub/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_http_client/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_http_server/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_https_ota/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_https_server/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_netif/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_system/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_timer/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_wifi/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/espcoredump/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/fatfs/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/freemodbus/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/freertos/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/heap/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/jsmn/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/libsodium/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/log/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/lwip/Kconfig /Us 
+ers/zainsiddavatam/esp/esp-idf/components/mbedtls/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mdns/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mqtt/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/newlib/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/nvs_flash/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/openssl/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/pthread/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/spi_flash/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/spiffs/Kconfig /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sra-board-component/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/unity/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/vfs/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wear_levelling/Kconfig /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/websocket/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wifi_provisioning/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wpa_supplicant/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/app_update/Kconfig.projbuild /Users/zainsiddavatam/esp/esp-idf/components/bootloader/Kconfig.projbuild /Users/zainsiddavatam/esp/esp-idf/components/esptool_py/Kconfig.projbuild /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main/Kconfig.projbuild /Users/zainsiddavatam/esp/esp-idf/components/partition_table/Kconfig.projbuild | check_python_dependencies prepare_kconfig_files
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 163):
+	$(summary) GENCONFIG
+	$(call RunConfGen,)
+	touch $(SDKCONFIG_MAKEFILE) $(BUILD_DIR_BASE)/include/sdkconfig.h  # ensure newer than sdkconfig
+	
+
+size-symbols:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_timer/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/partition_table/Kconfig.projbuild:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/coap/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/websocket/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:39:39
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/build/include/config/auto.conf: /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/sdkconfig /Users/zainsiddavatam/esp/esp-idf/components/app_trace/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/bt/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/coap/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/driver/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/efuse/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp-tls/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp32/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp32s2/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_adc_cal/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_common/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_eth/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_event/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_gdbstub/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_http_client/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_http_server/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_https_ota/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_https_server/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_netif/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_system/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_timer/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/esp_wifi/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/espcoredump/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/fatfs/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/freemodbus/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/freertos/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/heap/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/jsmn/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/libsodium/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/log/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/lwip/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mbedtls/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mdns/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/mqtt/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/newlib/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/nvs_flash/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/openssl/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/pthread/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/spi_flash/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/spiffs/Kconfig /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/sra-board-component/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/unity/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/vfs/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wear_levelling/Kconfig /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/components/websocket/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wifi_provisioning/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/wpa_supplicant/Kconfig /Users/zainsiddavatam/esp/esp-idf/components/app_update/Kconfig.projbuild /Users/zainsiddavatam/esp/esp-idf/components/bootloader/Kconfig.projbuild /Users/zainsiddavatam/esp/esp-idf/components/esptool_py/Kconfig.projbuild /Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main/Kconfig.projbuild /Users/zainsiddavatam/esp/esp-idf/components/partition_table/Kconfig.projbuild | check_python_dependencies prepare_kconfig_files
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 163):
+	$(summary) GENCONFIG
+	$(call RunConfGen,)
+	touch $(SDKCONFIG_MAKEFILE) $(BUILD_DIR_BASE)/include/sdkconfig.h  # ensure newer than sdkconfig
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/fatfs/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/bt/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/kxgettext.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+term_check:
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 113):
+	${PYTHON} ${IDF_PATH}/tools/check_term.py
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/driver/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_adc_cal/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/mqtt/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/make/common.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/jsmn/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/pthread/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/make/version.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:44
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/nconf.gui.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/vfs/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/log/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/conf.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp-tls/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/expr.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/conf-idf: /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/conf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/confdata.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/expand_env.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/expr.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/gconf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/images.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/kxgettext.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/mconf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/menu.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/nconf.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/nconf.gui.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/symbol.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/util.c /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/zconf.y
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 43):
+	@echo "mconf-idf is not required on this platform"
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/symbol.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/tools/kconfig/util.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_wifi/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_netif/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+menuconfig: /Users/zainsiddavatam/esp/esp-idf/tools/kconfig/mconf-idf | check_python_dependencies term_check prepare_kconfig_files
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `/Users/zainsiddavatam/esp/esp-idf/make/project_config.mk', line 140):
+	$(summary) MENUCONFIG
+	$(call RunConfGen,--dont-write-deprecated)
+	# RunConfGen before menuconfig ensures that deprecated options won't be ignored (they've got renamed)
+	$(call RunMenuConf)
+	# RunConfGen after menuconfig ensures that deprecated options are appended to $(SDKCONFIG) for backward compatibility
+	$(call RunConfGen,)
+	
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_system/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+build-components:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/sdkconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-15 14:29:53
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+size-components:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/espcoredump/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/esp_event/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/freertos/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+ 
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+/Users/zainsiddavatam/esp/esp-idf/components/lwip/Kconfig:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 15:51:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# files hash-table stats:
+# Load=96/1024=9%, Rehash=0, Collisions=22/284=8%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 6
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 3779 / max = 3779 / min = 3779 / avg = 3779
+
+# Finished Make data base on Thu Jun 23 13:23:40 2022
+
+ 
