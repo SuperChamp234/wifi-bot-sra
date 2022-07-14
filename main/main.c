@@ -21,30 +21,27 @@ void follow_commands_task(void* arg){
             //print to console
             ESP_LOGI(TAG, "speed: %f", speed);
             float motor_pwm = bound((speed), MIN_PWM, MAX_PWM);
-            if(read_comms().right_turn){
+            if(read_comms().front){
+                ESP_LOGI(TAG, "forward");
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, motor_pwm));
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, motor_pwm));
+            } else if(read_comms().back){
+                ESP_LOGI(TAG, "backward");
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_0, MOTOR_BACKWARD, motor_pwm));
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_1, MOTOR_BACKWARD, motor_pwm));
+            } else if(read_comms().right_turn) {
                 ESP_LOGI(TAG, "right turn");
-                set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 70.0f);
-                set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 0);
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, motor_pwm));
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_1, MOTOR_BACKWARD, motor_pwm));
             }
-            else if(read_comms().left_turn){
+            else if(read_comms().left_turn) {
                 ESP_LOGI(TAG, "left turn");
-                set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 0);
-                set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 70.0f);
-            }
-            else{
-                if(speed > 0){
-                    ESP_LOGI(TAG, "forward");
-                    set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, speed);
-                    set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, speed);
-                }
-                else if(speed < 0){
-                    set_motor_speed(MOTOR_A_0, MOTOR_BACKWARD, -motor_pwm);
-                    set_motor_speed(MOTOR_A_1, MOTOR_BACKWARD, -motor_pwm);
-                }
-                else{
-                    set_motor_speed(MOTOR_A_0, MOTOR_FORWARD, 0);
-                    set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, 0);
-                }
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_0, MOTOR_BACKWARD, motor_pwm));
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_1, MOTOR_FORWARD, motor_pwm));
+            } else {
+                ESP_LOGI(TAG, "stop");
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_0, MOTOR_STOP, 0));
+                ESP_ERROR_CHECK(set_motor_speed(MOTOR_A_1, MOTOR_STOP, 0));
             }
             reset_val_changed_coms();
         }

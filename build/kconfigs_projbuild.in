@@ -1,5 +1,0 @@
-source "/Users/zainsiddavatam/esp/esp-idf/components/app_update/Kconfig.projbuild"
-source "/Users/zainsiddavatam/esp/esp-idf/components/bootloader/Kconfig.projbuild"
-source "/Users/zainsiddavatam/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
-source "/Users/zainsiddavatam/esp/esp-idf/components/partition_table/Kconfig.projbuild"
-source "/Users/zainsiddavatam/Code_n_Projects/SRA/workspace/Wall-E/wifi_driver/main/Kconfig.projbuild"

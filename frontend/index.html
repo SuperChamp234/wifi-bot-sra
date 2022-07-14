@@ -26,63 +26,30 @@
       function send_test() {
         websocket.send("T" + "test");
       }
-
-      // Update the current slider value (each time you drag the slider handle)
       function speed_change() {
-        //output.innerHTML = document.getElementById("speed_slider").value;
-        //send the value to the server
         websocket.send("S" + document.getElementById("speed_slider").value);
         document.getElementById("speed_value").innerHTML =
           document.getElementById("speed_slider").value;
       }
       function right_change() {
-        //check if the checkbox is checked
-        if (document.getElementById("right_checkbox").checked == true) {
-          //send the value to the server
-          websocket.send("R" + "true");
-        } else {
-          //send the value to the server
-          websocket.send("R" + "false");
-        }
+        websocket.send("R" + "true");
       }
       function left_change() {
-        //check if the checkbox is checked
-        if (document.getElementById("left_checkbox").checked == true) {
-          //send the value to the server
-          websocket.send("L" + "true");
-        } else {
-          //send the value to the server
-          websocket.send("L" + "false");
-        }
+        websocket.send("L" + "true");
       }
-      document.addEventListener("keydown", function (event) {
-        if (event.keyCode == 37) {
-          //change the state of the left checkbox
-          document.getElementById("left_checkbox").checked = true;
-          //send the value to the server
-          left_change();
-          websocket.send("L" + "true");
-        } else if (event.keyCode == 39) {
-          //change the state of the right checkbox
-          document.getElementById("right_checkbox").checked = true;
-          //send the value to the server
-          right_change();
-        }
-      });
-      document.addEventListener("keyup", function (event) {
-        if (event.keyCode == 37) {
-          //change the state of the left checkbox
-          document.getElementById("left_checkbox").checked = false;
-          //send the value to the server
-          left_change();
-          websocket.send("L" + "false");
-        } else if (event.keyCode == 39) {
-          //change the state of the right checkbox
-          document.getElementById("right_checkbox").checked = false;
-          //send the value to the server
-          right_change();
-        } 
-      });
+      function forward_change() {
+        websocket.send("F" + "true");
+      }
+      function backward_change() {
+        websocket.send("B" + "true");
+      }
+        function stop_change() {
+        websocket.send("F"+"false");
+        websocket.send("B"+"false");
+        websocket.send("L"+"false");
+        websocket.send("R"+"false");
+      }
+      //repeat on btn hold
 
       window.onload = function () {
         console.log("LOADED");
@@ -94,7 +61,7 @@
 
         //Globals
         var updateCount = 0;
-        //document.getElementById("speed_value").innerHTML = document.getElementById("speed_slider").value;
+        let btnHoldCounter;
       };
     </script>
 
@@ -283,120 +250,48 @@
       />
       <h1>WEBSOCKET TEST</h1>
     </div>
-    <div style="te">
-      <div class="container value-container">
-        <div class = row>
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <!--checkbox-->
-                <div class="custom-control custom-checkbox">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="front_checkbox"
-                    onchange="front_change()"
-                  />
-                  <label class="custom-control-label" for="front_checkbox">
-                    Left
-                  </label>
-                </div>
-              </div>
+    <div class="container-fluid">
+      <!--button with id test_btn-->
+      <div class="row">
+        <!--slider for speed-->
+        <div class="input-group mb-3">
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="-100"
+              max="100"
+              value="0"
+              class="slider"
+              id="speed_slider"
+              onchange="speed_change()"
+            />
+          </div>
+          <!--display value of speed alognside-->
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">
+              <span id="speed_value">0</span>
+            </span>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm">
-            <form id="frm1" action="#">
-              <div>
-                <button
-                  type="button"
-                  class="btn btn-secondary btn-block"
-                  onclick="send_test()"
-                >
-                  Send Test Ping
-                </button>
-              </div>
-            </form>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="row">
+            <!--button-->
+            <button  onmousedown="forward_change()" onmouseup="stop_change()" type="button" id="forward_btn" ontouchstart="forward_change()" ontouchend="stop_change()" ontouchcancel="stop_change()">
+              Forward
+            </button>
           </div>
-          <div class="col-sm">
-            <!--A slider from speed, ranging from 0-20-->
-            <div class="input-group mb-3">
-              <div class="slidecontainer">
-                <input
-                  type="range"
-                  min="-100"
-                  max="100"
-                  value="0"
-                  class="slider"
-                  id="speed_slider"
-                  onchange="speed_change()"
-                />
-              </div>
-              <!--display value of speed alognside-->
-              <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2">
-                  <span id="speed_value">0</span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <!--A checkbox for going left-->
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <!--checkbox-->
-                <div class="custom-control custom-checkbox">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="left_checkbox"
-                    onchange="left_change()"
-                  />
-                  <label class="custom-control-label" for="left_checkbox">
-                    Left
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--A checkbox for going right-->
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <!--checkbox-->
-                <div class="custom-control custom-checkbox">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="right_checkbox"
-                    onchange="right_change()"
-                  />
-                  <label class="custom-control-label" for="right_checkbox">
-                    Right
-                  </label>
-                </div>
-              </div>
-            </div>
+          <div class="row">
+            <!--button-->
+            <button type="button" id="backward_btn" onmousedown="backward_change()" onmouseup="stop_change()" ontouchstart="backward_change()" ontouchend="stop_change()" ontouchcancel="stop_change()">Back</button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <!--checkbox-->
-                <div class="custom-control custom-checkbox">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="back_checkbox"
-                    onchange="back_change()"
-                  />
-                  <label class="custom-control-label" for="back_checkbox">
-                    Left
-                  </label>
-                </div>
-              </div>
-          </div>
+        <div class="col">
+          <!--button-->
+          <button type="button" id="left_btn" onmousedown="left_change()" onmouseup="stop_change()" ontouchstart="left_change()" ontouchend="stop_change()" ontouchcancel="stop_change()">Left</button>
+          <!--button-->
+          <button type="button" id="right_btn" onmousedown="right_change()" onmouseup="stop_change()" ontouchstart="right_change()" ontouchend="stop_change()" ontouchcancel="stop_change()">Right</button>
         </div>
       </div>
     </div>

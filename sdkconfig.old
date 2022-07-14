@@ -127,8 +127,8 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # WiFi Config
 #
-CONFIG_WIFI_SSID="myssid"
-CONFIG_WIFI_PASSWORD="mypassword"
+CONFIG_WIFI_SSID="zainov-den2G"
+CONFIG_WIFI_PASSWORD="zain2003"
 CONFIG_MAXIMUM_RETRY=5
 # end of WiFi Config
 
@@ -1029,6 +1029,51 @@ CONFIG_WPA_MBEDTLS_CRYPTO=y
 # CONFIG_WPA_TESTING_OPTIONS is not set
 # CONFIG_WPA_WPS_STRICT is not set
 # end of Supplicant
+
+#
+# SRA Board Component Config
+#
+
+#
+# I2C
+#
+CONFIG_I2CDEV_TIMEOUT=1000
+# CONFIG_I2CDEV_NOLOCK is not set
+# end of I2C
+
+# CONFIG_ENABLE_OLED is not set
+
+#
+# Servo motor configuration
+#
+
+#
+# Servo A
+#
+CONFIG_SERVO_A_MIN_PULSEWIDTH=500
+CONFIG_SERVO_A_MAX_PULSEWIDTH=3000
+CONFIG_SERVO_A_MAX_DEGREE=180
+# end of Servo A
+
+#
+# Servo B
+#
+CONFIG_SERVO_B_MIN_PULSEWIDTH=500
+CONFIG_SERVO_B_MAX_PULSEWIDTH=3000
+CONFIG_SERVO_B_MAX_DEGREE=180
+# end of Servo B
+
+#
+# Servo C
+#
+CONFIG_SERVO_C_MIN_PULSEWIDTH=500
+CONFIG_SERVO_C_MAX_PULSEWIDTH=3000
+CONFIG_SERVO_C_MAX_DEGREE=180
+# end of Servo C
+# end of Servo motor configuration
+
+CONFIG_NUMBER_OF_SAMPLES=64
+# end of SRA Board Component Config
 
 #
 # WebSocket Server

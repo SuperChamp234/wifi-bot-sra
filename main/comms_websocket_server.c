@@ -2,7 +2,7 @@
 
 static const char *TAG = "websocket_server";
 
-static comms_val_t comms_val = { .test = 1.0, .speed = 0, .right_turn = false, .left_turn = false};
+static comms_val_t comms_val = { .test = 1.0, .speed = 0, .right_turn = false, .left_turn = false, .front = false, .back = false, .val_changed = false };
 
 static QueueHandle_t client_queue;
 const static int client_queue_size = 10;
@@ -66,8 +66,23 @@ void websocket_callback(uint8_t num, WEBSOCKET_TYPE_t type, char *msg, uint64_t 
                     else
                         comms_val.left_turn = false;
                     break;
-                ESP_LOGI(TAG, "got an unknown message with length %i: %s", (int)len, &(msg[1]));
-                break;
+                case 'F':
+                    ESP_LOGI(TAG, "got message length %i: %s", (int)len - 1, &(msg[1]));
+                    if(strcmp(&msg[1], "true") == 0)
+                        comms_val.front = true;
+                    else
+                        comms_val.front = false;
+                    break;
+                case 'B':
+                    ESP_LOGI(TAG, "got message length %i: %s", (int)len - 1, &(msg[1]));
+                    if(strcmp(&msg[1], "true") == 0)
+                        comms_val.back = true;
+                    else
+                        comms_val.back = false;
+                    break;
+                default:
+                    ESP_LOGI(TAG, "got an unknown message with length %i: %s", (int)len, &(msg[1]));
+                    break;
             }
         }
         break;

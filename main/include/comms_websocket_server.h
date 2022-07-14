@@ -33,6 +33,8 @@ typedef struct comms_val
 {
     float test;
     float speed;
+    bool front;
+    bool back;
     bool right_turn;
     bool left_turn;
     bool val_changed;
