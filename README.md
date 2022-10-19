@@ -109,7 +109,7 @@ and before disconnecting, configuring the wifi
 idf.py menuconfig
 ```
 
-Under the `Example Connection Configuration`
+Under the `Wall-E Bot Configuration`
 
 - `WIFI SSID` - Set the Wifi SSID
 - `WIFI PASSWORD` - Set wifi Password
