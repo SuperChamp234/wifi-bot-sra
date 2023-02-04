@@ -87,7 +87,7 @@ Install ESP-IDF : https://github.com/espressif/esp-idf
 Clone the project
 
 ```sh
-git clone https://github.com/SuperChamp234/wifi-bot-sra
+git clone https://github.com/SuperChamp234/wifi-bot-sra --recursive
 cd wifi-bot-sra
 ```
 
